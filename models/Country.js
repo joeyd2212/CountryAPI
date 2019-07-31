@@ -1,10 +1,31 @@
-
+//add dependencies
 
 const mongoose = require("mongoose"); 
+
+//require subdocument models
+let LanguageSchema = require("./Language").schema
+let CurrenciesSchema = require("./Currencies").schema
+let TranslationsSchema = require("./Translations").schema
+
+
+
+//setup database properties
+const server = "localhost"
+const database = "countries_db"
+const username = ""
+const password = ""
+
+//connect to database
+
+mongoose.connect(`mongodb://${server}/${database}`, {useNewURLParser:true})
+
+
+
+
 const Schema = mongoose.Schema;
 
 
-
+//create country Schema
 
 const CountrySchema = new Schema ({
     name: String,
@@ -23,5 +44,7 @@ const CountrySchema = new Schema ({
 
 });
 
+
+//export module
 module.exports = mongoose.model("Country", CountrySchema) ;
 

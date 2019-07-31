@@ -1,5 +1,7 @@
 
 
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema;
 
 
 const TranslationsSchema = new Schema ({
@@ -15,3 +17,5 @@ const TranslationsSchema = new Schema ({
     fa: String
 
 });
+
+module.exports = mongoose.model("Translations", TranslationsSchema) 

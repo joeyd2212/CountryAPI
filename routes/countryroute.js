@@ -9,14 +9,25 @@ let CountryModel = require("../models/Country")
 
 //Create new country
 
+router.post("/country",(req, res) => {
+    let model = new CountryModel(req.body)
+    model.save()
+     .then(doc => {
 
+        //if save failes
+
+        if (!doc || doc.length === 0) {
+            
+        }
+     })
+})
 
 
 
 
 //Read country
 
-router.get("/'country", (req,res) => {
+router.get("/country", (req,res) => {
 
     //check for name query string
     if(!req.query.name){
@@ -40,3 +51,8 @@ router.get("/'country", (req,res) => {
 
 
 //delete country
+
+
+
+//export the router for the router variable above
+module.exports = router;
