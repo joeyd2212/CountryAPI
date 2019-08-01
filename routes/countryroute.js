@@ -63,10 +63,55 @@ router.get("/country", (req,res) => {
 
 //update country
 
+router.put("/country",(req,res) =>{
+
+//check for name query string
+if(!req.query.name){
+    return res.status(400).send("Name parameter is missing")
+}
+    //update data
+    CountryModel.findOneAndUpdate({
+        name:req.query.name //name of the country being updated
+
+
+//json passed and will contain new value(req.body)-whatever you post in body section post man, update raw value
+    }, req.body, {new:true}) // after update API should display new  updated value, not the old one
+    .then(doc => {
+        res.json(doc) //print out the document with updated values
+    })
+    .catch(err => {
+        res.status(500).json(err)
+    })
+
+})
+
+
 
 
 
 //delete country
+
+router.delete("/country",(req,res) =>{
+
+    //check for name query string
+    if(!req.query.name){
+        return res.status(400).send("Name parameter is missing")
+    }
+        //delete data
+        CountryModel.findOneAndRemove({
+            name:req.query.name //name of the country being deleted
+    
+    
+    //json passed and will contain new value(req.body)-whatever you post in body section post man, update raw value
+        }, req.body, {new:true}) // after update API should display new  updated value, not the old one
+        .then(doc => {
+            res.json(doc) //print out the document with delete country/shoaws what got deleted
+        })
+        .catch(err => {
+            res.status(500).json(err)
+        })
+    
+    })
 
 
 
