@@ -20,9 +20,9 @@ let countryroute = require("./routes/countryroute")
 app.use(countryroute)
 
 // //add currency route
-// let currencyroute = require("./routes/currenciesroute")
+let currencyroute = require("./routes/currenciesroute")
 
-// app.use(currencyroute)
+app.use(currencyroute)
 
 
 // //add language route

@@ -49,7 +49,7 @@ router.get("/currency", (req,res) => {
     if(!req.query.name){
         return res.status(400).send("Name parameter is missing")
     }
-    CountryModel.findOne({
+    CurrencyModel.findOne({
         name: req.query.name
     })
     .then(doc => {
@@ -63,14 +63,14 @@ router.get("/currency", (req,res) => {
 
 //update country
 
-router.put("/country",(req,res) =>{
+router.put("/currency",(req,res) =>{
 
 //check for name query string
 if(!req.query.name){
     return res.status(400).send("Name parameter is missing")
 }
     //update data
-    CountryModel.findOneAndUpdate({
+    CurrencyModel.findOneAndUpdate({
         name:req.query.name //name of the country being updated
 
 
@@ -91,14 +91,14 @@ if(!req.query.name){
 
 //delete country
 
-router.delete("/country",(req,res) =>{
+router.delete("/currency",(req,res) =>{
 
     //check for name query string
     if(!req.query.name){
         return res.status(400).send("Name parameter is missing")
     }
         //delete data
-        CountryModel.findOneAndRemove({
+        CurrencyModel.findOneAndRemove({
             name:req.query.name //name of the country being deleted
     
     
