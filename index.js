@@ -14,18 +14,27 @@ app.use(bodyParser.json())
 
 //add routes
 
-//adding rcountry route
+//adding country route
 let countryroute = require("./routes/countryroute")
 
 app.use(countryroute)
 
-//add currency route
+// //add currency route
+// let currencyroute = require("./routes/currenciesroute")
+
+// app.use(currencyroute)
 
 
-//add language route
+// //add language route
 
-//add translation
+// let languageroute = require("./routes/languageroute")
 
+// app.use(languageroute)
+
+// //add translation
+// let translationroute = require("./routes/translationroute")
+
+// app.use(translationroute)
 
 
 //handle 404 errors
@@ -36,7 +45,7 @@ app.use((req, res, next) => {
 
 //handle 500 errors
 
-app.use((error, req, res, next) => {
+app.use((err, req, res, next) => {
     console.error(err.stack)
 })
 

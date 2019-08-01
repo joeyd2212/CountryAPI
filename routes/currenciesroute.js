@@ -3,7 +3,7 @@
 let express = require("express")
 let router = express.Router()
 
-let CountryModel = require("../models/Country")
+let CurrencyModel = require("../models/Currencies")
 
 //Create CRUD operation  
 
@@ -11,10 +11,10 @@ let CountryModel = require("../models/Country")
 
 //Create new country
 
-router.post("/country",(req, res) => {
+router.post("/currency",(req, res) => {
     console.log("post")
     console.log(req.body)
-    let model = new CountryModel(req.body)
+    let model = new CurrencyModel(req.body)
     model.save()
      .then(doc => {
 
@@ -43,7 +43,7 @@ router.post("/country",(req, res) => {
 
 //Read country
 
-router.get("/country", (req,res) => {
+router.get("/currency", (req,res) => {
 
     //check for name query string
     if(!req.query.name){
