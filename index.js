@@ -31,10 +31,7 @@ app.use(currencyroute)
 
 // app.use(languageroute)
 
-// //add translation
-// let translationroute = require("./routes/translationroute")
 
-// app.use(translationroute)
 
 
 //handle 404 errors
