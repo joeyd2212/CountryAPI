@@ -27,7 +27,7 @@ const Schema = mongoose.Schema;
 
 //create country Schema
 
-const CountrySchema = new Schema ({
+let CountrySchema = new Schema ({
     name: String,
     capital: String,
     region: String,
