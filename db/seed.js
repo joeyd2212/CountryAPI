@@ -1,11 +1,17 @@
 
-const countries = require("../countries.js")
+const countries = require("../countries.json")
 
 const Country = require("../models/Country.js")
 // const Currencies= require("../models/Currencies")
 // const Language = require("../models/Language")
 // const Translation = require("../models/Currencies")
 
+
+
+
+
+
+//need to map out the properties I want ...Already in URL..need to redo?
 var newarr = countries.map(newitems => {
     let newObj = {}
     newObj.name = newitems.name
@@ -21,5 +27,12 @@ var newarr = countries.map(newitems => {
 
     return newObj
 })
-console.log(newarr)
+// console.log(newarr)
+
+Country.remove({})
+.then(start=>{
+    Country.collection.insert(newarr)
+}).then(data=>{console.log(data)})
+
+
 

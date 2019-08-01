@@ -18,7 +18,7 @@ router.post("/currency",(req, res) => {
     model.save()
      .then(doc => {
 
-        //if document save failes
+        //if document save, failes
                 //500 is a server error
         if (!doc || doc.length === 0) {
             console.log("save fail")
