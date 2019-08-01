@@ -27,9 +27,9 @@ app.use(currencyroute)
 
 // //add language route
 
-// let languageroute = require("./routes/languageroute")
+let languageroute = require("./routes/languageroute")
 
-// app.use(languageroute)
+app.use(languageroute)
 
 
 
