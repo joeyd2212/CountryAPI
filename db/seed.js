@@ -1,69 +1,47 @@
 
-const countries = require("../countries.json")
 
-const Country = require("../models/Country.js")
+const countries = require("./countries.json")
+
+const Country = require("../models/Country")
 const Currencies= require("../models/Currencies")
 const Language = require("../models/Language")
-const Translation = require("../models/Translations")
+// const Translation = require("../models/Translations")
 
-Country.remove({})
+
+//mapping through the country data to get properties i want
+var newarr = countries.map(newitems => {
+    let newObj = {}
+    newObj.name = newitems.name
+    newObj.capital= newitems.capital
+    newObj.region = newitems.region
+    newObj.subregion = newitems.population
+    newObj.languages = newitems.languages
+    newObj.translations = newitems.translations
+    newObj.acronym = newitems.acronym
+    newObj.currencies=  newitems.currencies
+    newObj.flag = newitems.flag
+    
+    
+
+    return newObj
+})
+console.log(newarr)
+
+//currencies
+Currencies.remove({})
     .then(() => {
-        Country.create(country)
-            .then((countrydata) => {
+        Currencies.create(currency)
+            .then((currencyedata) => {
                 
             })
-    })
-
-    Currencies.remove({})
-    .then(() => {
-        Currencies.create(currencies)
-            .then((currencydata) => {
-                
-            })
-    })
-
-    Language.remove({})
+        },       
+//language
+ Language.remove({})
     .then(() => {
         Language.create(language)
-            .then((languagedata) => {
+            .then((languageedata) => {
                 
-            })
-    })
+            })  
+        }             
 
-    Translation.remove({})
-    .then(() => {
-        Translation.create(translation)
-            .then((translationdata) => {
                 
-            })
-    })
-
-    // Country.remove({})
-    // .then(start=>{
-    //     Country.collection.insert(newarr)
-    // }).then(data=>{console.log(data)})
-
-
-
-//need to map out the properties I want ...Already in URL..need to redo?
-// var newarr = countries.map(newitems => {
-//     let newObj = {}
-//     newObj.name = newitems.name
-//     newObj.capital = newitems.capital
-//     newObj.region = newitems.region
-//     newObj.subregion = newitems.subregion
-//     newObj.population  = newitems.population
-//     newObj.languages = newitems.languages
-//     newObj.translations = newitems.translations
-//     newObj.acronym =  newitems.acronym
-//     newObj.currencies = newitems.currencies
-//     newObj.flag = newitems.glag
-
-//     return newObj
-// })
-// console.log(newarr)
-
-
-
-
-

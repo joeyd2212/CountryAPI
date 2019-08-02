@@ -9,15 +9,6 @@ let TranslationsSchema = require("./Translations").schema
 
 
 
-//setup database properties
-const server = "localhost"
-const database = "countries_db"
-const username = ""
-const password = ""
-
-//connect to database
-
-mongoose.connect(`mongodb://${server}/${database}`, {useNewURLParser:true})
 
 
 
@@ -37,11 +28,7 @@ let CountrySchema = new Schema ({
     translations: {TranslationsSchema},
     acronym: String,
     currencies: [CurrenciesSchema],
-    flag: String,
-    
-
-    
-
+    flag: String
 });
 
 

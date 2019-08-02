@@ -6,7 +6,7 @@ axios.get('https://restcountries.eu/rest/v2/all?fields=name;capital;region;subre
   .then(function (response) {
     // handle success
     console.log(response.data);
-    fs.writeFile("./countries.json", JSON.stringify(response.data), err => {
+    fs.writeFile("./db/countries.json", JSON.stringify(response.data), err => {
       if (err) {
         console.error(err);
       } else {
