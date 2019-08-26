@@ -14,13 +14,13 @@ router.get("/", countryController.index)
 router.post("/", countryController.create);
 
 //find by name
-router.get("/name/:name", countryController.show);
+router.get("/:id", countryController.show);
 
 //update name
-router.put("/name/:name", countryController.update);
+router.put("/:name", countryController.update);
 
 //delete by name
-router.delete("/name:name", countryController.destroy);
+router.delete("/:id", countryController.destroy);
 
 
 

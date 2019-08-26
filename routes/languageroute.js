@@ -14,13 +14,13 @@ router.get("/", languageController.index)
 router.post("/", languageController.index);
 
 //find
-router.get("/name/:name", languageController.show);
+router.get(":id", languageController.show);
 
 //update
-router.put("/name/:name", languageController.update);
+router.put("/:name", languageController.update);
 
 //delete
-router.delete("/name:name", languageController.destroy);
+router.delete("/:id", languageController.destroy);
 
 
 
