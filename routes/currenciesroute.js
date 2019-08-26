@@ -4,7 +4,6 @@ let express = require("express")
 let router = express.Router()
 
 let currencyController = require("../controllers/currency")
-                /////chance path to controller/currency
 
 //Create CRUD operation  
 

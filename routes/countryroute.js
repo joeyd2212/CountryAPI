@@ -4,7 +4,7 @@ let express = require("express")
 let router = express.Router()
 
 let countryController = require("../controllers/country") 
-                    //change path to controllers/country when created
+
 //Create CRUD operation  
 
 //find all
