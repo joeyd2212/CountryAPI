@@ -20,7 +20,7 @@ app.get("/",(req, res) =>{
 
 app.use("/api/country",require("./routes/countryroute"));
 app.use("/api/currency",require("./routes/currenciesroute"))
-// app.use("/api/language", require("./routes/languageroute"))
+app.use("/api/language", require("./routes/languageroute"))
 
 
 //listen to PORT  //runn what is assigned on Heroku or run on 3000
