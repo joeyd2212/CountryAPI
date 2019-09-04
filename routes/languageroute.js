@@ -10,7 +10,7 @@ let languageController = require("../controllers/Language")
 //find all
 router.get("/", languageController.index)
 
-//find By
+//find By Id
 router.get("/:id", languageController.show);
 
 

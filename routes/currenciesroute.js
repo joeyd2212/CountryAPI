@@ -11,7 +11,7 @@ let currencyController = require("../controllers/currency")
 //find all
 router.get("/", currencyController.index)
 
-//find By
+//find By Id
 router.get("/:id", currencyController.show);
 
 
