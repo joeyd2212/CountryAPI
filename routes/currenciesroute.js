@@ -11,20 +11,8 @@ let currencyController = require("../controllers/currency")
 //find all
 router.get("/", currencyController.index)
 
-//create
-router.post("/", currencyController.index);
-
-//find
-router.get("/name/:name", currencyController.show);
-
-//update
-router.put("/name/:name", currencyController.update);
-
-//delete
-router.delete("/name:name", currencyController.destroy);
-
-
-
+//find By
+router.get("/:id", currencyController.show);
 
 
 

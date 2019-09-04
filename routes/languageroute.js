@@ -10,17 +10,10 @@ let languageController = require("../controllers/Language")
 //find all
 router.get("/", languageController.index)
 
-//create
-router.post("/", languageController.index);
-
-//find
+//find By
 router.get(":id", languageController.show);
 
-//update
-router.put("/:name", languageController.update);
 
-//delete
-router.delete("/:id", languageController.destroy);
 
 
 

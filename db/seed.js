@@ -3,6 +3,12 @@
 const countries = require("./countries.json")
 const Country = require("../models/Country")
 
+const currency = require("./currencies.json")
+const Currencies = require("../models/Currencies")
+
+const language = require("./languages.json")
+const Languages = require("../models/Language")
+
 
 
 
@@ -21,6 +27,47 @@ var newarr = countries.map(newitems => {
 
     return newObj
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Currencies.deleteMany({})
+    .then(_ => {
+        Currencies.collection.insert(currency)
+            .then(currency => {
+                console.log(currency)
+                process.exit()
+            })
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
+
+
+
+
+
+
+
+
 
 
 
