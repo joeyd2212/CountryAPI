@@ -11,7 +11,7 @@ let languageController = require("../controllers/Language")
 router.get("/", languageController.index)
 
 //find By
-router.get(":id", languageController.show);
+router.get("/:id", languageController.show);
 
 
 

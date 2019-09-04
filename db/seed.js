@@ -28,6 +28,18 @@ var newarr = countries.map(newitems => {
     return newObj
 })
 
+Country.deleteMany({})
+    .then(_ => {
+        Country.collection.insert(countries)
+            .then(countries => {
+                console.log(countries)
+                process.exit()
+            })
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
 
 
 //mapping through language data
