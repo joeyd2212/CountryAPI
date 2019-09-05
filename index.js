@@ -28,3 +28,9 @@ app.use("/api/language", require("./routes/languageroute"))
 
 // //app is listening if the port gets a request
 // app.listen(PORT,() => console.info(`Running on ${PORT}`))
+
+app.set("port", process.env.PORT || 8080);
+
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+});
