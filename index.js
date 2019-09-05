@@ -14,13 +14,15 @@ app.use(bodyParser.json())
 
 
 
-app.get("/",(req, res) =>{
-    res.send("Peter Piper Picked")
-})
+
 
 app.use("/api/country",require("./routes/countryroute"));
 app.use("/api/currency",require("./routes/currenciesroute"))
 app.use("/api/language", require("./routes/languageroute"))
+
+app.get("/",(req, res) =>{
+  res.send("Peter Piper Picked")
+})
 
 
 //listen to PORT  //run what is assigned on Heroku or run on 3000
