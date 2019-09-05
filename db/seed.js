@@ -65,8 +65,6 @@ Languages.deleteMany({})
 
 
 
-
-
 //seeding currency data
 
 

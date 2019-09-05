@@ -23,8 +23,8 @@ app.use("/api/currency",require("./routes/currenciesroute"))
 app.use("/api/language", require("./routes/languageroute"))
 
 
-//listen to PORT  //runn what is assigned on Heroku or run on 3000
-const PORT = process.env.PORT || 3000
+//listen to PORT  //run what is assigned on Heroku or run on 3000
+// const PORT = process.env.PORT || 3000
 
-//app is listening if the port gets a request
-app.listen(PORT,() => console.info(`Running on ${PORT}`))
+// //app is listening if the port gets a request
+// app.listen(PORT,() => console.info(`Running on ${PORT}`))
