@@ -60,14 +60,14 @@ Country.deleteMany({})
             })
 
 
-        }).then(
+        }).catch(e => console.log(e)).then(
         Currencies.deleteMany({})
             .then(_ => {
                 Currencies.collection.insert(currency)
                     .then(currency => {
                         console.log(currency)
                         process.exit()
-                    })
+                    }).catch(e => console.log(e))
             })
             .catch(err => {
                 console.log(err)
