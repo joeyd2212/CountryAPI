@@ -3,7 +3,7 @@
 let express = require("express")
 let router = express.Router()
 
-let languageController = require("../controllers/Language")
+let languageController = require("../controllers/language")
 
 //Create CRUD operation  
 
