@@ -31,6 +31,7 @@ const Languages = require("../models/Language")
 
 Country.find({}).then(Country.create(countries).catch(e => console.log(e)))
 
+
 // Country.deleteMany({})
 //     .then(_ => {
 //         Country.collection.insert(countries)
