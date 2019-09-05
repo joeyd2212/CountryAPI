@@ -13,20 +13,20 @@ const Languages = require("../models/Language")
 
 
 //mapping through the country data to get properties i want
-var newarr = countries.map(newitems => {
-    let newObj = {}
-    newObj.name = newitems.name
-    newObj.capital= newitems.capital
-    newObj.region = newitems.region
-    newObj.subregion = newitems.population
-    newObj.languages = newitems.languages
-    newObj.currencies=  newitems.currencies
-    newObj.flag = newitems.flag
+// var newarr = countries.map(newitems => {
+//     let newObj = {}
+//     newObj.name = newitems.name
+//     newObj.capital= newitems.capital
+//     newObj.region = newitems.region
+//     newObj.subregion = newitems.population
+//     newObj.languages = newitems.languages
+//     newObj.currencies=  newitems.currencies
+//     newObj.flag = newitems.flag
     
     
 
-    return newObj
-})
+//     return newObj
+// })
 
 
 Country.deleteMany({}).then(Country.create(countries)).catch(e => console.log(e))
