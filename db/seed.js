@@ -38,7 +38,7 @@ Country.deleteMany({})
     })
     .catch(err => {
         console.log(err)
-    })
+    }).catch(e => console.log(e))
 
 
 
