@@ -29,20 +29,20 @@ const Languages = require("../models/Language")
 // })
 
 
-Country.find({}).then(Country.create(countries).catch(e => console.log(e)))
+// Country.find({}).then(Country.create(countries).catch(e => console.log(e)))
 
 
-// Country.deleteMany({})
-//     .then(_ => {
-//         Country.collection.insert(countries)
-//             .then(countries => {
-//                 console.log(countries)
-//                 process.exit()
-//             })
-//     })
-//     .catch(err => {
-//         console.log(err)
-//     }).catch(e => console.log(e))
+Country.deleteMany({})
+    .then(_ => {
+        Country.collection.insert(countries)
+            .then(countries => {
+                console.log(countries)
+                process.exit()
+            })
+    })
+    .catch(err => {
+        console.log(err)
+    }).catch(e => console.log(e))
 
 
 
