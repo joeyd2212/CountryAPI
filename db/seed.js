@@ -29,7 +29,7 @@ const Languages = require("../models/Language")
 // })
 
 
-Country.deleteMany({}).then(Country.create(countries)).catch(e => console.log(e))
+Country.find({}).then(Country.create(countries).catch(e => console.log(e)))
 
 // Country.deleteMany({})
 //     .then(_ => {
