@@ -28,17 +28,20 @@ var newarr = countries.map(newitems => {
     return newObj
 })
 
-Country.deleteMany({})
-    .then(_ => {
-        Country.collection.insert(countries)
-            .then(countries => {
-                console.log(countries)
-                process.exit()
-            })
-    })
-    .catch(err => {
-        console.log(err)
-    }).catch(e => console.log(e))
+
+Country.deleteMany({}).then(Country.create(countries)).catch(e => console.log(e))
+
+// Country.deleteMany({})
+//     .then(_ => {
+//         Country.collection.insert(countries)
+//             .then(countries => {
+//                 console.log(countries)
+//                 process.exit()
+//             })
+//     })
+//     .catch(err => {
+//         console.log(err)
+//     }).catch(e => console.log(e))
 
 
 
