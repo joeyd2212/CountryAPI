@@ -42,43 +42,43 @@ Country.deleteMany({})
 
 
 
-//mapping through language data
+// //mapping through language data
 
-var lang =language.map(newthing => {
-    let newlangg ={}
-    newlangg.name = newthing.name
-    newlangg.nativeName = newthing.nativeName
-})
+// var lang =language.map(newthing => {
+//     let newlangg ={}
+//     newlangg.name = newthing.name
+//     newlangg.nativeName = newthing.nativeName
+// })
 
-Languages.deleteMany({})
-    .then(_ => {
-        Languages.collection.insert(language)
-            .then(language => {
-                console.log(language)
-                process.exit()
-            })
-    })
-    .catch(err => {
-        console.log(err)
-    })
-
-
+// Languages.deleteMany({})
+//     .then(_ => {
+//         Languages.collection.insert(language)
+//             .then(language => {
+//                 console.log(language)
+//                 process.exit()
+//             })
+//     })
+//     .catch(err => {
+//         console.log(err)
+//     })
 
 
-//seeding currency data
 
 
-Currencies.deleteMany({})
-    .then(_ => {
-        Currencies.collection.insert(currency)
-            .then(currency => {
-                console.log(currency)
-                process.exit()
-            })
-    })
-    .catch(err => {
-        console.log(err)
-    })
+// //seeding currency data
+
+
+// Currencies.deleteMany({})
+//     .then(_ => {
+//         Currencies.collection.insert(currency)
+//             .then(currency => {
+//                 console.log(currency)
+//                 process.exit()
+//             })
+//     })
+//     .catch(err => {
+//         console.log(err)
+//     })
 
 
 
