@@ -42,7 +42,9 @@
 * Requested API data using Axios
     and wrote it to json files I created for each model
 * Created my index.js file    
-* Created my route and controllers files    
+* Created my route and controllers files 
+* Tested CRUD functionality through postman
+* Deployed project using MongoDB Atlas and Heroku
 
 ## Deployment Instructions
 
